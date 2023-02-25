@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function TweetItButton() {
   const tweetText = 'Congrats! #taland';
-  const quotedTweetUrl = 'https://twitter.com/talandio/status/1629159950751506432';
+  const quotedTweetUrl = 'https://twitter.com/talandio/status/1629455222425767939';
   const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(quotedTweetUrl)}`;
 
   const handleTweetClick = () => {
