@@ -2,7 +2,11 @@ import { useState } from "react";
 
 function TweetItButton() {
 
-  const tweetler = [
+  let tweetText: string;
+  const tweetHastags = `#taland #supportTaland #supportweb3talents`;
+  const quotedTweetUrl = "https://twitter.com/talandio/status/1629455222425767939";
+
+  const tweets = [
     "Lets build together 👾",
     "We are in ✌",
     "Taland go to moon 🚀",
@@ -12,17 +16,13 @@ function TweetItButton() {
     return Math.floor(Math.random() * max);
   }
 
-  function randomTweetSec() {
-    return tweetler[getRandomInt(tweetler.length)];
+  function randomTweet() {
+    return tweets[getRandomInt(tweets.length)];
   }
-
-  const tweetText = randomTweetSec() + `#taland #supportTaland #supportweb3talents`;
   
-  const quotedTweetUrl = "https://twitter.com/talandio/status/1629455222425767939";
-  
-  const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(quotedTweetUrl)}`;
-
   const handleTweetClick = () => {
+    tweetText = randomTweet() + " " + tweetHastags;
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(quotedTweetUrl)}`;
     window.open(tweetUrl);
   };
 
