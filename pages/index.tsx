@@ -15,9 +15,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logoS.jpeg" />
       </Head>
-      <div className=" w-full min-w-[200px] min-h-[1200px] h-full bgtaland">
+      <div className=" w-full min-w-[200px] h-screen bgtaland flex justify-center items-center h-screen">
         <div className=' text-white font-semibold text-center flex flex-col '>
-          <div className=' pt-[1rem] flex flex-col  mx-[5rem] max-sm:mx-[1rem] h-screen '>
+          <div className=' pt-[1rem] flex flex-col  mx-[5rem] max-sm:mx-[1rem]'>
           <img
               src='/talandbanner.jpeg'
               className=' max-w-[600px] mx-auto w-full shadow-lg shadow-black'
