@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import TweetItButton from '@/components/tweetIt'
 import ShareLinkedinButton from '@/components/shareLinkedin'
+import ReTweetItButton from '@/components/retweetIt'
+import TweetLikeButton from '@/components/tweetLike'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -30,8 +32,13 @@ export default function Home() {
             GelecektekiSen Teknoloji Laboratuarı’ndan çıkan Web 3.0 girişimimiz Taland, sektörünün en prestijli Blokchain Start Up Summit’lerinden AIBC World Eurasia sahnesinde pitching yapacak 6 girişimden biri olarak seçildi. 🎉
             </div>
             <div className=' flex text-sm font-bold font-serif justify-center pt-5  flex-row flex-wrap text-red-700'>Beğenilerinize ve tweetlerinize ihtiyacımız var!</div>
-            <div className=' flex justify-center mt-8 gap-2 flex-row max-sm:flex-col'>
+            {/* https://developer.twitter.com/en/docs/twitter-for-websites/web-intents */}
+            <div className=' flex justify-center mt-8 gap-2 flex-row'>
+              <TweetLikeButton/>
               <TweetItButton/>
+              <ReTweetItButton/>
+            </div>
+            <div className=' flex justify-center mt-8 gap-2 flex-row'>
               <ShareLinkedinButton/>
             </div>
           </div>
