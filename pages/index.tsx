@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import TweetItButton from '@/components/tweetIt'
+import ShareLinkedinButton from '@/components/shareLinkedin'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -31,6 +32,7 @@ export default function Home() {
             <div className=' flex text-sm font-bold font-serif justify-center pt-5  flex-row flex-wrap text-red-700'>Beğenilerinize ve tweetlerinize ihtiyacımız var!</div>
             <div className=' flex justify-center mt-8 gap-2 flex-row max-sm:flex-col'>
               <TweetItButton/>
+              <ShareLinkedinButton/>
             </div>
           </div>
         </div>
