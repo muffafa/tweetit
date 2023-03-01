@@ -1,12 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import TweetItButton from "@/components/tweetIt";
 import ShareLinkedinButton from "@/components/shareLinkedin";
 import ReTweetItButton from "@/components/retweetIt";
 import TweetLikeButton from "@/components/tweetLike";
 import TwitterContainer from "@/components/twitterContainer";
-import { TwitterTweetEmbed } from "react-twitter-embed";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,7 +32,7 @@ export default function Home() {
               Summit’lerinden AIBC World Eurasia sahnesinde pitching yapacak 6
               girişimden biri olarak seçildi. 🎉
             </div>
-            
+
             <div className=" flex text-sm font-bold font-serif justify-center pt-5  flex-row flex-wrap text-red-700">
               Beğenilerinize ve tweetlerinize ihtiyacımız var!
             </div>
@@ -48,7 +46,7 @@ export default function Home() {
               <ReTweetItButton />
             </div>
             <div className="flex m-5 justify-center">
-              <TwitterTweetEmbed tweetId={"1629455222425767939"} />
+              <TwitterContainer/>
             </div>
           </div>
         </div>
